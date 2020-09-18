@@ -1,0 +1,134 @@
+//-------------网页头部开始
+.header{
+    .logo{
+        .pd(@w15);
+        .ml(-0.15rem);
+        display:inline-block;
+        img{
+            .size(2.5rem,0.5rem);
+        }
+    }
+    .icon-bar{
+        .mt(@w20);
+        .mr(@w15);
+        background-color:@color-default;
+    }
+    .nav{
+        .position-x;
+        left:51%;
+        .mt(0.32rem);
+        li{
+            margin:0 0.02rem;
+            a{
+                padding:0.08rem 0.15rem;
+                position:relative;
+                z-index:2;
+                .fs20;
+                color:@color-default;
+                background-color:transparent !important;
+                .transition(all .3s);
+                &:hover,
+                &:focus{
+                    color:@color-main;
+                }
+                
+                &:after{
+                    content:'';
+                    position:absolute;
+                    z-index: 10;
+                    .spuare(100%);
+                    top:0;
+                    left:0;
+                    background-color:@color-default;
+                    .opacity(.1);
+                    .transition(all .3s);
+                    padding-top:0.08rem;
+                    padding-bottom:0.08rem;
+                    .transform(scale(0));
+                }
+                &:hover:after{
+                    .transform(scale(1));
+                }
+            }
+            &.active{
+                a{
+                    background-color:transparent;
+                    color:@color-main;
+                    &:after{
+                        .transform(scale(1));
+                    }
+                    &:hover,
+                    &:focus{
+                        background-color:transparent;
+                        color:@color-main;
+                    }
+                }
+            }
+        }
+    }
+    .tel{
+        color:@color-main;
+        padding:0.08rem 0.15rem;
+        margin:0.32rem -0.15rem 0 0;
+        font:bold 0.2rem/1 "microsoft yahei";
+        .segmdl2{
+            font-weight:100;
+            .mr(@w10);
+        }
+    }
+    
+
+}
+@media screen and(max-width:1080px){
+    .header{
+        .navbar-collapse{
+            nav{
+                height:0.78rem;
+            }
+            .navbar-respond{
+                width:100%;
+                left:90%;
+            }
+            .tel{
+                margin:0;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:767px){
+    .header{
+        .logo{
+            .ml(0);
+            padding:@w15;
+            display:inline-block;
+            img{
+                .size(250px,40px)
+            }
+        }
+        .navbar-collapse{
+            border-top:1px solid #fff;
+            nav{
+                height:3.1005rem;
+            }
+            .navbar-respond{
+                .mt(0.24rem);
+                left:50%;
+                li{
+                    a{
+                        .fs14;
+                        text-indent:0.15rem;
+                    }
+                }
+            }
+        }
+        .tel{
+            display:block;
+            position:absolute;
+            bottom:0;
+            .pl(0);
+            .fs14;
+        }
+    }
+}
+//-------------网页头部结束

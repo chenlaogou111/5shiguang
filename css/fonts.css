@@ -1,0 +1,235 @@
+
+.highlight {
+    color: #00c2ff
+}
+.text-info {
+	color: #00c2ff!important
+}
+.help-block{
+	display:none;
+}
+/*.text-danger,
+.input-validation-error {
+	color: #ff4900!important
+}*/
+
+/*.input-validation-error,
+.input-validation-error:focus {
+	border-color: #ff4900
+}
+
+.input-validation-error:focus {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 73, 0, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 73, 0, .6)
+}
+*/
+.btn {
+	border-style: dotted;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s
+}
+.btn:focus {
+	outline: none
+}
+.btn-info {
+	border-color: #00c2ff;
+	background-color: rgba(0, 194, 255, .75);
+	color: #fff
+}
+.btn-info:hover,
+.btn-info:active,
+.btn-info:focus {
+	color: #fff;
+	background-color: #00c2ff
+}
+.input-group-btn .btn {
+	border-style: solid
+}
+
+/* 字体图标 */
+.navbar-shiguang .navbar-right>li>a .segmdl2 {
+	font-weight: normal;
+	margin-right: 10px
+}
+@font-face {
+	font-family: SegMdl2;
+	src: url(../fonts/segmdl2.eot);
+	src: local('☺'), url(../fonts/segmdl2.woff) format('woff'), url(../fonts/segmdl2.ttf) format('truetype'), url(../fonts/segmdl2.svg) format('svg');
+	font-weight: 400;
+	font-style: normal
+}
+.segmdl2-md:before {
+	font-size: 48px;
+	line-height: 48px
+}
+.services-item .segmdl2-md {
+		font-size: 30px;
+		line-height: 24px;
+		margin-right: 15px
+}
+.services-item:hover .segmdl2-md {
+	color: #fff
+}
+.segmdl2-Phone:before {
+	content: ''
+}
+.segmdl2-media:before {
+	content: ''
+}
+.segmdl2-media:before {
+	content: ''
+}
+.segmdl2-Page:before {
+	content: ''
+}
+.segmdl2-CommentLegacy:before {
+	content: ''
+}
+.segmdl2-Globe:before {
+	content: ''
+}
+.segmdl2-Rename:before {
+	content: ''
+}
+.segmdl2-switch:before {
+	content: ''
+}
+.segmdl2-twitter:before {
+	content: ''
+}
+.segmdl2-monument:before {
+	content: ''
+}
+.segmdl2-report:before {
+	content: ''
+}
+.segmdl2-Street:before {
+	content: ''
+}
+.segmdl2-Cloud:before {
+	content: ''
+}
+.segmdl2-share:before {
+	content: ''
+}
+.segmdl2-controller:before {
+	content: ''
+}
+.segmdl2-Repair:before {
+	content: ''
+}
+.segmdl2-Cellphone:before {
+	content: ''
+}
+.segmdl2-Camera:before {
+	content: ''
+}
+.segmdl2-map-pin-play:before {
+	content: ''
+}
+.segmdl2-Phone:before {
+	content: ''
+}
+.segmdl2-Send:before {
+	content: ''
+}
+.segmdl2-transcribe:before {
+	content: ''
+}
+.segmdl2-List:before {
+	content: ''
+}
+.segmdl2-user-status:before {
+	content: ''
+}
+.segmdl2-Cancel:before {
+	content: ''
+}
+.segmdl2-Up:before {
+	content: ''
+}
+
+
+
+
+
+.scroll-down {
+	position: absolute;
+	bottom: -27px;
+	left: 50%;
+	z-index: 5;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	letter-spacing: .1em;
+	text-decoration: none;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+	padding-top: 70px
+}
+.down-button {
+	bottom: 70px
+}
+.down-button:first-child {
+	bottom: 78px;
+	-webkit-animation-delay: .15s;
+	-moz-animation-delay: .15s;
+	-o-animation-delay: .15s;
+	animation-delay: .15s
+}
+.scroll-button {
+	font-size: 40px;
+	cursor: pointer;
+	position: absolute;
+	left: 50%;
+	z-index: 30;
+	color: rgba(255, 255, 255, .7);
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	transition: all .2s ease-in-out;
+	opacity: .5;
+	-webkit-animation: sdb05 1.5s infinite;
+	-moz-animation: sdb05 1.5s infinite;
+	-o-animation: sdb05 1.5s infinite;
+	animation: sdb05 1.5s infinite;
+	box-sizing: border-box;
+	border-left: 2px solid #00c2ff;
+	border-bottom: 2px solid #00c2ff;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin-left: -12px
+}
+
+@keyframes sdb05 {
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0
+	}
+	50% {
+		opacity: 1
+	}
+	100% {
+		transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0
+	}
+}
+
+
+
+
+
+
+
+

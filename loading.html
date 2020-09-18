@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">		<!--移动设备优先  视窗  款度=设备宽度  允许缩放比例1倍  最大缩放比例1倍  禁止用户缩放-->
+		<meta name="keywords" content="时光网络科技,漯河时光网络科技有限公司,网络公司,漯河网络公司,软件公司,漯河软件公司,软件开发,漯河软件开发,软件定制,定制开发,系统集成,餐饮管理软件,商超管理软件,网站建设,WEB开发,域名注册,虚拟主机,企业邮局,400电话,网络办公系统,oa,seo,搜索引擎推广,微信平台,微信公众平台,网格化管理系统,网格化管理服务平台,云解决方案,智能ic卡解决方案">
+		<meta name="description" content="漯河时光网络科技有限公司(时光网络科技)提供软件开发,软件定制,软件销售,系统集成,网站建设,域名注册,虚拟主机,企业邮局,400电话,网络办公系统,oa,seo,搜索引擎推广,微信平台,微信公众平台,网格化管理系统,网格化管理服务平台,云解决方案,智能ic卡解决方案等一站式信息化服务。">
+		<meta name="author" content="漯河时光网络科技有限公司">
+		<title>漯河时光网络科技有限公司_时光网络科技_网络公司_软件公司_软件开发_软件定制_网站建设_微信公众平台_400电话_域名注册_虚拟主机_一站式信息化服务</title>
+		<meta name="mobile-agent" content="format=html5;url=http://www.5shiguang.net">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /><!-- 告示浏览器用最高版本的IE进行渲染 -->
+		<meta name="renderer" content="webkit" /><!--按照双内核进行渲染-->
+		
+		<!--引入bootstrap的文件-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet/less" type="text/css" href="less/index.less"/>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <script src="js/less.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div class="loading" id="loading">
+			<div class="loading-top"></div>
+			<div class="loading-middle"></div>
+			<div class="loading-bottom"></div>
+		</div>
+		
+		
+		
+		
+		
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				/*
+					每刷新一次页面window.name + 1
+					找到id为loading里的.loading-top加类名
+					给下一个元素加类名
+					如果刷新移除loading
+				*/
+				window.name = Number(window.name) + 1;
+				console.log(window.name)
+				if(window.name === "1"){
+					$('#loading')
+					.find('.loading-top').addClass('loading-top-animate')
+					.next().addClass('loading-middle-animate')
+					.next().addClass('loading-bottom-animate');
+					setTimeout(function(){
+						$('#loading').remove();
+					},1000);
+				}else{
+					$('#loading').remove();
+				}
+				
+			})
+		</script>
+	</body>
+</html>

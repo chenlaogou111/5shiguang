@@ -1,0 +1,193 @@
+@charset "utf-8";
+@import "public";
+
+
+@color-main:#00c2ff;
+@color-load:#337ab7;
+@color-default:#fff;
+@w1:0.01rem;
+@w5:0.05rem;
+@w10:0.1rem;
+@w15:0.15rem;
+@w20:0.2rem;
+@w25:0.25rem;
+
+html{
+    font-size:625%;
+}
+
+//-----------网页头部样式开始
+.header{
+    background-color:rgba(0,0,0,.4);
+    .logo{
+        .pd(@w15);
+        .ml(-0.15rem);
+        display:inline-block;
+        img{
+            height:0.4rem;
+        }
+    }
+    .icon-bar{
+        .mt(@w20);
+        .mr(@w15);
+        background-color:@color-default;
+    }
+    .nav{
+        .position-x;
+        left:51%;
+        .mt(0.24rem);
+        li{
+            margin:0 0.02rem;
+            a{
+                padding:0.08rem 0.15rem;
+                position:relative;
+                z-index:2;
+                .fs14;
+                color:@color-default;
+                background-color:transparent !important;
+                .transition(all .3s);
+                &:hover,
+                &:focus{
+                    color:@color-main;
+                }
+                
+                &:after{
+                    content:'';
+                    position:absolute;
+                    z-index: 10;
+                    .spuare(100%);
+                    top:0;
+                    left:0;
+                    background-color:@color-default;
+                    .opacity(.1);
+                    .transition(all .3s);
+                    padding-top:0.08rem;
+                    padding-bottom:0.08rem;
+                    .transform(scale(0));
+                }
+                &:hover:after{
+                    .transform(scale(1));
+                }
+            }
+            &.active{
+                a{
+                    background-color:transparent;
+                    color:@color-main;
+                    &:after{
+                        .transform(scale(1));
+                    }
+                    &:hover,
+                    &:focus{
+                        background-color:transparent;
+                        color:@color-main;
+                    }
+                }
+            }
+        }
+    }
+    .tel{
+        color:@color-main;
+        padding:0.08rem 0.15rem;
+        margin:0.24rem -0.15rem 0 0;
+        font:bold 0.14rem/1 "microsoft yahei";
+        .segmdl2{
+            font-weight:100;
+            .mr(@w10);
+        }
+    }
+    
+
+}
+@media screen and(max-width:992px){
+    .header{
+        .navbar-collapse{
+            nav{
+                height:0.78rem;
+            }
+            .navbar-respond{
+                width:100%;
+                left:80%;
+            }
+            .tel{
+                margin:0;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:767px){
+    .header{
+        .logo{
+            .ml(0);
+            padding:@w15;
+            display:inline-block;
+            img{
+                .size(250px,40px)
+            }
+        }
+        .navbar-collapse{
+            border-top:1px solid #fff;
+            nav{
+                height:3.1005rem;
+            }
+            .navbar-respond{
+                .mt(0.24rem);
+                left:50%;
+                li{
+                    a{
+                        .fs14;
+                        text-indent:0.15rem;
+                    }
+                }
+            }
+        }
+        .tel{
+            display:block;
+            position:absolute;
+            bottom:0;
+            .pl(0);
+            .fs14;
+        }
+    }
+}
+//-----------网页头部样式结束
+
+
+//-----------网页底部样式开始
+.footer{
+    padding:0.25rem 0 0.15rem;
+    color:#fff;
+    background-color:#666;
+    .toscroll{
+        display: block;
+        width:0.4rem;
+        height:0.4rem;
+        line-height:0.35rem;
+        text-align:center;
+        border: 3px solid #00c2ff;
+        border-radius: 50%;
+        color: #00c2ff;
+        opacity: 0;
+        position: fixed;
+        bottom: 15px;
+        right:25px;
+        text-decoration: none;
+        transition:all .5s;
+        span{
+            font-size:0.2rem;
+            &:before {
+                margin-right:0;
+            }
+        }
+    }
+}
+//-----------网页底部样式结束
+
+
+//-----------媒体查询系列
+@media (max-width: 600px){
+    footer.footer .pull-right {
+        float: left!important;
+        clear:both;
+    }
+}
