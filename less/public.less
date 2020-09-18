@@ -1,0 +1,318 @@
+// 宽高
+.size(@width,@height){
+    width:@width;
+    height:@height;
+}
+//矩形
+.spuare(@size){
+    .size(@size;@size);
+}
+
+//外边距 margin
+.mg(@mg){
+    margin:@mg;
+}
+.mt(@mg-t){
+    margin-top:@mg-t;
+}
+.mr(@mg-r){
+    margin-right:@mg-r;
+}
+.mb(@mg-b){
+    margin-bottom:@mg-b;
+}
+.ml(@mg-l){
+    margin-left:@mg-l;
+}
+
+//内边距 padding
+.pd(@pd){
+    padding:@pd;
+}
+.pt(@pd-t){
+    padding-top:@pd-t;
+}
+.pr(@pd-r){
+    padding-right:@pd-r;
+}
+.pb(@pd-b){
+    padding-bottom:@pd-b;
+}
+.pl(@pd-l){
+    padding-left:@pd-l;
+}
+
+// 字体大小
+.fs12{
+    font-size:0.12rem;
+}
+.fs14{
+    font-size:0.14rem;
+}
+.fs16{
+    font-size:0.16rem;
+}
+.fs18{
+    font-size:0.18rem;
+}
+.fs20{
+    font-size:0.2rem;
+}
+.fs24{
+    font-size:0.24rem;
+}
+
+// 文本截断-单行
+.text-overflow(@type:ellipsis){
+    overflow:hidden;
+    text-overflow:@type;
+    white-space: nowrap;
+}
+
+// 文本截断-多行
+.text-overflow-more(@line){
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:@line;
+    -webkit-box-orient:vertical;
+}
+
+// 定位到水平垂直都居中的位置
+.position-center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    .transform(translate(-50%,-50%));
+}
+
+// 定位到水平居中
+.position-x{
+    position:absolute;
+    left:50%;
+    .transform(translateX(-50%));
+}
+
+// 定位到垂直居中
+.position-y{
+    position:absolute;
+    top:50%;
+    .transform(translateY(-50%));
+}
+
+// 可调整的文本域
+.resizeble(@direction:both){
+    //Options：horizontal，vertical，both
+    resize:@direction;
+    //Safari fix
+    overflow:auto;
+}
+
+
+//是否允许用户选择内容
+.user-select(@value:none){
+    .pre(user-select,@value);
+}
+
+//  css3新特性
+.pre(@style, @value) {
+    -webkit-@{style}: @value;
+    -moz-@{style}: @value;
+    -ms-@{style}: @value;
+    -o-@{style}: @value;
+    @{style}: @value;
+}
+
+//滤镜
+.filter(@args) {
+    .pre(filter, @args)
+}
+
+//过渡
+.transition(@args) {
+    .pre(transition, @args);
+}
+
+//变形
+.transform(@args) {
+    .pre(transform, @args);
+}
+
+//动画
+.animation(@args) {
+    .pre(animation, @args)
+}
+
+
+//图片滤镜
+.filter(@args){
+    .pre(filter,@args)
+}
+
+//  box-sizing
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model; // Safari <= 5
+     -moz-box-sizing: @box-model; // Firefox <= 19
+          box-sizing: @box-model;
+}
+
+//  圆角
+.border-radius(@radius){
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    -o-border-radius:@radius;
+    border-radius:@radius;
+}
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+   border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+     border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+   border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+     border-top-left-radius: @radius;
+}
+
+//  盒子阴影
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
+}
+
+//过渡效果
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+.transition-property(@transition-property) {
+  -webkit-transition-property: @transition-property;
+          transition-property: @transition-property;
+}
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+.transition-timing-function(@timing-function) {
+  -webkit-transition-timing-function: @timing-function;
+          transition-timing-function: @timing-function;
+}
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+       -o-transition: -o-transform @transition;
+          transition: transform @transition;
+}
+
+//  变形
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees); // IE9 only
+          transform: rotate(@degrees);
+}
+.scale(@ratio; @ratio-y...) {
+  -webkit-transform: scale(@ratio, @ratio-y);
+      -ms-transform: scale(@ratio, @ratio-y); // IE9 only
+          transform: scale(@ratio, @ratio-y);
+}
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y); // IE9 only
+          transform: translate(@x, @y);
+}
+.skew(@x; @y) {
+  -webkit-transform: skew(@x, @y);
+      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+          transform: skew(@x, @y);
+}
+.translate3d(@x; @y; @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}
+
+.rotateX(@degrees) {
+  -webkit-transform: rotateX(@degrees);
+      -ms-transform: rotateX(@degrees); // IE9 only
+          transform: rotateX(@degrees);
+}
+.rotateY(@degrees) {
+  -webkit-transform: rotateY(@degrees);
+      -ms-transform: rotateY(@degrees); // IE9 only
+          transform: rotateY(@degrees);
+}
+.perspective(@perspective) {
+  -webkit-perspective: @perspective;
+     -moz-perspective: @perspective;
+          perspective: @perspective;
+}
+.perspective-origin(@perspective) {
+  -webkit-perspective-origin: @perspective;
+     -moz-perspective-origin: @perspective;
+          perspective-origin: @perspective;
+}
+.transform-origin(@origin) {
+  -webkit-transform-origin: @origin;
+     -moz-transform-origin: @origin;
+      -ms-transform-origin: @origin; // IE9 only
+          transform-origin: @origin;
+}
+
+//  动画
+.animation(@animation) {
+  -webkit-animation: @animation;
+          animation: @animation;
+}
+.animation-name(@name) {
+  -webkit-animation-name: @name;
+          animation-name: @name;
+}
+.animation-duration(@duration) {
+  -webkit-animation-duration: @duration;
+          animation-duration: @duration;
+}
+.animation-timing-function(@timing-function) {
+  -webkit-animation-timing-function: @timing-function;
+          animation-timing-function: @timing-function;
+}
+.animation-delay(@delay) {
+  -webkit-animation-delay: @delay;
+          animation-delay: @delay;
+}
+.animation-iteration-count(@iteration-count) {
+  -webkit-animation-iteration-count: @iteration-count;
+          animation-iteration-count: @iteration-count;
+}
+.animation-direction(@direction) {
+  -webkit-animation-direction: @direction;
+          animation-direction: @direction;
+}
+
+//  透明度
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+//  占位符文本
+.placeholder(@color: @input-color-placeholder) {
+  &::-moz-placeholder           { color: @color; } // Firefox
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+
+
+
+

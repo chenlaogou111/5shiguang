@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import "base";
+@import "public";
+
+//------------banner图开始
+.banner{
+    width:100%;
+    position:relative;
+    color:@color-default;
+    overflow:hidden;
+    img{
+        width:100%;
+        min-height:1.6rem;
+    }
+    .banner-content{
+        .spuare(100%);
+        .pt(15%);
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:1;
+        span{
+            font-size:0.46rem;
+        }
+        .lead {
+            margin-bottom:0.2rem;
+            font-size:0.22rem;
+            font-weight:300;
+            line-height:1.4;
+        }
+    }
+}
+//------------banner图结束
+
+    .segmdl2::before{
+        margin-right: 6px;
+        line-height: normal;
+        position:relative;
+        top:0.02rem;
+    }
+//------------网页出题内容开始
+.main-content{
+    margin-bottom:0.3rem;
+    //------------路径导航
+    .pd(0 0.15rem);
+    .bread-nav{
+        .pr(0);
+        .pl(0);
+        .mg(0.15rem 0 0.3rem);
+        background-color:transparent;
+        border-radius:0;
+        li.active:first-child{
+            font-weight: bold;
+        }
+        li:nth-of-type(2)::before{
+            .pd(0);
+            content:'';
+        }
+    }
+    //------------标题
+    .splitter{
+        .mg(0.3rem 0 0.5rem);
+        text-align: center;
+        img{
+            max-width:100%;
+        }
+    }
+    //------------内容
+    .md30{
+        .mb(0.3rem);
+    }
+    .btn-blue{
+        border-color: #00c2ff;
+        background-color: rgba(0, 194, 255, .75);
+        border-radius:0;
+        &:hover{
+            background-color: #00c2ff;
+        }
+    }
+    .btn-red{
+        border-color: #ff4900;
+        background-color: rgba(255, 73, 0, .75);
+        border-radius:0;
+        &:hover{
+            background-color: #ff4900;
+        }
+    }
+}
+
+
+
+//------------媒体查询系列
+@media (max-width:992px){
+    .main-content{
+        .splitter{
+            .mg(0.1rem 0 0.15rem);
+        }
+    }
+}
+@media (max-width:767px){
+    .banner{
+        .banner-content{
+            h1{
+                font-size:0.2rem;
+                font-weight:bold;
+                span{
+                    font-size:0.24rem;
+                }
+            }
+            .lead{
+                font-size:0.12rem;
+            }
+        }
+    }
+}

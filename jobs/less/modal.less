@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import "base";
+@import "public";
+
+.modal{
+    .modal-dialog{
+        .transform(translate(0,0));
+    }
+    .modal-content{
+        border-radius:0;
+        .modal-header{
+            background-color:#00c2ff;
+            color:@color-default;
+            text-align:center;
+            .pd(0.2rem 0.15rem);
+            position: relative;
+            .close {
+                color:@color-default;
+                text-shadow:none;
+                opacity:1;
+                outline:none;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                bottom:-0.1rem;
+                left: 50%;
+                margin-left:-20px;
+                .spuare(0);
+                border-width:0.1rem 0.1rem 0;
+                border-style: solid;
+                border-color: #00c2ff transparent;
+            }
+        }
+        .modal-body{
+            .pd(0.3rem 0.15rem);
+            form{
+                label{
+                    font-weight:normal;
+                    font-size:0.12rem;
+                }
+                input{
+                    border-radius:0;
+                }
+            }
+        }
+    }
+}
+

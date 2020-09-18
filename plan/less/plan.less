@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import "base";
+@import "public";
+
+
+#plan{
+    background: url("../../img/case.jpg") no-repeat center center;
+    text-align: center;
+    background-size: cover;
+    .section-content{
+        h2{
+            color:#333;
+            font{
+                .mr(0.04rem);
+                .ml(0.04rem);
+                font-size:0.36rem;
+            }
+        }
+        .splitter{
+            .mg(0.3rem 0 0.5rem);
+        }
+        .plan-main{
+            .pd(0);
+        }
+        .service-text{
+            .pd(0.15rem);
+            height:auto;
+            overflow:hidden;
+            position:relative;
+            .box-sizing(border-box);
+            .transition(all .4s);
+            cursor:pointer;
+            h3{
+                color:@color-default;
+                a{
+                    color:@color-default;
+                }
+            }
+            i{
+                font-style:normal;
+            }
+            &:hover{
+                background-color: rgba(0,194,255,.85);
+                i{
+                    color:@color-default;
+                }
+            }
+        }
+    }
+}

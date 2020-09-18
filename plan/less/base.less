@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+html{
+    font-size:625% !important;
+}
+
+.wrap{
+    .size(100%,100vh);
+    overflow:hidden;
+    font:0.14rem/1.42857"微软雅黑",'宋体';
+    background:no-repeat center / cover;
+}
+
+a,
+a:hover{
+    text-decoration:none;
+}
+i{
+    font-style:normal;
+}
+
+//引进灵心字体
+@font-face {
+    font-family: lingxin;
+    src: url("../../fonts/lingxin.ttf");
+}
+.lingxin-font {
+    font-family: lingxin, 'Microsoft YaHei', 'YaHei WebFont', Verdana, Geneva, Tahoma, sans-serif, '宋体';
+    font-weight: normal!important;
+    font-style: italic;
+    color:#666;
+}
+
+//引入字体图标
+@font-face {
+    font-family: SegMdl2;
+    src: url(../fonts/segmdl2.eot);
+    src: local('☺'), url(../fonts/segmdl2.woff) format('woff'), url(../fonts/segmdl2.ttf) format('truetype'), url(../fonts/segmdl2.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+.segmdl2:before {
+    font-family: SegMdl2
+}
+.highlight {
+    color: #00c2ff
+}
+
+@color-main:#00c2ff;
+@color-load:#337ab7;
+@color-default:#fff;
+@w1:0.01rem;
+@w5:0.05rem;
+@w10:0.1rem;
+@w15:0.15rem;
+@w20:0.2rem;
+@w25:0.25rem;
+
+
